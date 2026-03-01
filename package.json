@@ -1,0 +1,14 @@
+{
+  "name": "mhxx-doc",
+  "version": "2.0.0",
+  "description": "Monster Hunter XX Guide Database",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "serve": "npx live-server --port=3000"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0",
+    "live-server": "^1.2.2"
+  }
+}
