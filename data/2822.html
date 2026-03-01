@@ -1,41 +1,98 @@
-﻿<!DOCTYPE html>
-<html lang="zh">
+<!DOCTYPE html>
+<html lang="zh-CN" class="dark">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
-
-
-
-<meta name="description" content="新作3DS游戏【MHXX】怪物猎人双十字攻略wiki网站。武器・任务・狩技等的攻略情报和查找数据库">
-<meta name="keywords" content="mhxx,怪物猎人XX,怪物猎人,双十字,攻略">
-
-<title>
-随从猫任务【上位】 | 【MHXX】怪物猎人双十字攻略大全
-</title>
-
-<link rel="stylesheet" media="all" href="../index.css">
-<script src="../assets/application-53ee482db9501c259f1cd8e29154fa3f.js"></script>
-
-<!--[if lt IE 9]>
-<script src="../js/html5shiv.js"></script>
-<script src="../js/respond.js"></script>
-<![endif]-->
-
-<script>
-$('body').on('contextmenu selectstart copy cut', false);
-</script>
-
-
-
-
-
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="随从猫任务【上位】 | 怪物猎人双十字 - MHXX怪物猎人XX攻略大全">
+  <title>随从猫任务【上位】 | 怪物猎人双十字 - MHXX攻略大全</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=Russo+One&display=swap" rel="stylesheet">
+  <link rel="icon" href="../index/favicon.ico" sizes="any">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: '#7C3AED', light: '#A78BFA', dark: '#5B21B6' },
+            accent: { DEFAULT: '#F43F5E', light: '#FB7185' },
+            dark: { DEFAULT: '#0F0F23', 50: '#1A1A2E', 100: '#16162A', 200: '#121226', 300: '#0F0F23', 400: '#0B0B1F' },
+          },
+          fontFamily: { display: ['Russo One', 'sans-serif'], body: ['Chakra Petch', 'sans-serif'] },
+        },
+      },
+    }
+  </script>
+  <style>
+    body{font-family:'Chakra Petch',sans-serif;background:#0F0F23;background-image:radial-gradient(ellipse at top,rgba(124,58,237,0.15) 0%,transparent 50%),linear-gradient(rgba(124,58,237,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(124,58,237,0.03) 1px,transparent 1px);background-size:100% 100%,50px 50px,50px 50px}
+    .font-display{font-family:'Russo One',sans-serif}
+    .text-neon{text-shadow:0 0 5px #7C3AED,0 0 10px #7C3AED,0 0 20px #7C3AED}
+    .shadow-neon{box-shadow:0 0 5px #7C3AED,0 0 20px #7C3AED}
+    ::-webkit-scrollbar{width:8px}::-webkit-scrollbar-track{background:#0B0B1F}::-webkit-scrollbar-thumb{background:#7C3AED;border-radius:4px}
+    .nav-link::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:0;height:2px;background:#7C3AED;box-shadow:0 0 10px #7C3AED;transition:width .3s}
+    .nav-link:hover::after,.nav-link.active::after{width:75%}
+    .sidebar-link{display:block;padding:8px 16px;color:#9CA3AF;font-size:14px;transition:all .2s}
+    .sidebar-link:hover{padding-left:24px;background:rgba(124,58,237,0.1);color:#fff}
+    .data-table{width:100%;border-collapse:collapse}
+    .data-table th{background:rgba(124,58,237,0.2);color:#A78BFA;font-family:'Russo One',sans-serif;text-align:left;padding:12px 16px;border-bottom:1px solid rgba(124,58,237,0.3)}
+    .data-table td{padding:12px 16px;border-bottom:1px solid rgba(255,255,255,0.1)}
+    .data-table tr:hover td{background:rgba(124,58,237,0.1)}
+    .breadcrumb{display:flex;align-items:center;gap:8px;font-size:14px;color:#9CA3AF;margin-bottom:24px}
+    .breadcrumb a{color:#A78BFA}.breadcrumb a:hover{color:#7C3AED}
+    .tag{display:inline-block;padding:2px 8px;font-size:12px;border-radius:4px;margin:2px}
+    .tag-new{background:rgba(168,85,247,0.2);color:#C084FC}
+    .tag-g{background:rgba(236,72,153,0.2);color:#F472B6}
+    .th1{background:rgba(124,58,237,0.3);color:#fff;font-family:'Russo One',sans-serif;padding:12px 16px}
+    .th4{background:rgba(124,58,237,0.15);color:#A78BFA;padding:8px 16px;font-size:14px}
+    .t0{width:100%;border-collapse:collapse;margin-bottom:16px;background:rgba(22,22,42,0.8);border-radius:8px;overflow:hidden}
+    .t0 td{padding:10px 16px;border-bottom:1px solid rgba(124,58,237,0.1)}
+    .t0 tr:last-child td{border-bottom:none}
+    .t0 a{color:#A78BFA;transition:color .2s}.t0 a:hover{color:#7C3AED}
+    .b{font-weight:bold}.box1{background:rgba(22,22,42,0.8);border-radius:12px;padding:20px;margin-bottom:24px;border:1px solid rgba(124,58,237,0.2)}
+    .icon1{display:inline-block;width:8px;height:8px;background:#7C3AED;border-radius:50%;margin-right:8px;box-shadow:0 0 10px #7C3AED}
+  </style>
 </head>
-
-
-<body id="body_game"  >
+<body class="min-h-screen text-gray-100 antialiased">
+<nav class="fixed top-4 left-4 right-4 z-50 bg-dark-100/90 backdrop-blur-md border border-primary/20 rounded-2xl shadow-2xl">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex items-center justify-between h-16">
+<a href="../index/index.html" class="flex items-center gap-3">
+<div class="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
+<svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+</div>
+<span class="font-display text-xl text-neon">MHXX DOC</span>
+</a>
+<div class="hidden md:flex flex-1 max-w-md mx-8">
+<div class="relative w-full">
+<input type="text" placeholder="搜索怪物、武器、任务..." class="w-full px-4 py-2 pl-10 bg-dark-200 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:shadow-neon transition-all">
+<svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+</div>
+</div>
+<div class="hidden md:flex items-center gap-1">
+<a href="../index/index.html" class="nav-link relative px-4 py-2 text-gray-300 hover:text-primary transition-colors">首页</a>
+<a href="../data/2501.html" class="nav-link relative px-4 py-2 text-gray-300 hover:text-primary transition-colors">怪物</a>
+<a href="../data/1900.html" class="nav-link relative px-4 py-2 text-gray-300 hover:text-primary transition-colors">武器</a>
+<a href="../data/2300.html" class="nav-link relative px-4 py-2 text-gray-300 hover:text-primary transition-colors">防具</a>
+<a href="../data/2859.html" class="nav-link relative px-4 py-2 text-gray-300 hover:text-primary transition-colors">任务</a>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<nav class="breadcrumb">
+<a href="../index/index.html">首页</a>
+<span>/</span>
+<span>随从猫任务【上位】 | 怪物猎人双十字</span>
+</nav>
+<div class="lg:col-span-3">
+                     <div class="bg-dark-100/80 backdrop-blur border border-primary/20 rounded-xl p-6">
+                       <header class="mb-6">
+                         <h1 class="font-display text-2xl md:text-3xl text-white mb-2">随从猫任务【上位】 | 怪物猎人双十字</h1>
+                       </header>
+                       
 
 
 <!-- suc_gen -->
@@ -1832,13 +1889,32 @@ $('body').on('contextmenu selectstart copy cut', false);
 </div>
 </div>
 
-<script>
-$('.cpg1_8').html('<a href="../ida/218410.html">木天蓼</a>');$('.cpg1_12').html('<a href="../ida/229918.html">虫的上端材</a> x2');$('.cpg1_16').html('<a href="../ida/219353.html">刺身鱼</a> x2');$('.cpg1_20').html('<a href="../ida/218400.html">粘着草</a> x2');$('.cpg1_24').html('<a href="../ida/188272.html">蓝蘑菇</a> x3');$('.cpg1_28').html('<a href="../ida/218402.html">爆裂核桃</a> x2');$('.cpg1_32').html('<a href="../ida/218389.html">土蜂幼虫</a> x3');$('.cpg1_36').html('<a href="../ida/188469.html">灵鹤石</a>');$('.cpg1_40').html('<a href="../ida/188296.html">纯粹上端材</a> x2');$('.cpg1_44').html('<a href="../ida/219892.html">草食龙的上端材</a>');$('.cpg1_48').html('<a href="../ida/229785.html">欠けた大石像</a>');$('.cpg1_52').html('<a href="../ida/219836.html">黄速龙的麻痹牙</a> x4');$('.cpg1_56').html('<a href="../ida/189584.html">眠魚</a> x2');$('.cpg1_60').html('<a href="../ida/219798.html">火药草</a> x2');$('.cpg1_64').html('<a href="../ida/219909.html">心跳蘑菇</a> x3');$('.cpg1_68').html('<a href="../ida/189517.html">染色果</a> x2');$('.cpg1_72').html('<a href="../ida/229914.html">骨的上端材</a> x2');$('.cpg1_76').html('<a href="../ida/229918.html">虫的上端材</a> x2');$('.cpg1_80').html('<a href="../ida/229831.html">矿石的上端材</a> x2');$('.cpg1_84').html('<a href="../ida/188296.html">纯粹上端材</a> x2');$('.cpg1_88').html('<a href="../ida/219941.html">飞甲虫的上端材</a>');$('.cpg1_92').html('<a href="../ida/189139.html">朴素的上端材</a>');$('.cpg1_96').html('<a href="../ida/218410.html">木天蓼</a>');$('.cpg1_100').html('<a href="../ida/219823.html">杀人蜂幼虫</a> x2');$('.cpg1_104').html('<a href="../ida/218401.html">爆裂沙丁鱼</a> x2');$('.cpg1_108').html('<a href="../ida/218383.html">降霜草</a> x2');$('.cpg1_112').html('<a href="../ida/189517.html">染色果</a> x2');$('.cpg1_116').html('<a href="../ida/188308.html">远古的龙骨</a>');$('.cpg1_120').html('<a href="../ida/219944.html">冰结晶</a> x3');$('.cpg1_124').html('<a href="../ida/218097.html">力的成长饵</a> x3');$('.cpg1_128').html('<a href="../ida/188296.html">纯粹上端材</a> x2');$('.cpg1_132').html('<a href="../ida/229782.html">大生意橡果</a>');$('.cpg1_136').html('<a href="../ida/226826.html">灾祸的布</a>');$('.cpg1_140').html('<a href="../ida/229918.html">虫的上端材</a> x2');$('.cpg1_144').html('<a href="../ida/219937.html">破裂龙鱼</a>');$('.cpg1_148').html('<a href="../ida/218399.html">睡眠草</a> x2');$('.cpg1_152').html('<a href="../ida/219955.html">麻痹菇</a> x2');$('.cpg1_156').html('<a href="../ida/219793.html">扩散果</a> x2');$('.cpg1_160').html('<a href="../ida/229831.html">矿石的上端材</a> x2');$('.cpg1_164').html('<a href="../ida/218387.html">速的成长饵</a> x3');$('.cpg1_168').html('<a href="../ida/229916.html">灾祸的暗布</a>');$('.cpg1_172').html('<a href="../ida/229782.html">大生意橡果</a>');$('.cpg1_176').html('<a href="../ida/237545.html">狗龙的上端材</a>');$('.cpg1_180').html('<a href="../ida/219961.html">稀有金龟子</a> x2');$('.cpg1_184').html('<a href="../ida/229914.html">骨的上端材</a> x2');$('.cpg1_188').html('<a href="../ida/188633.html">疲劳伞菇</a> x2');$('.cpg1_192').html('<a href="../ida/218376.html">抵消果实</a> x3');$('.cpg1_196').html('<a href="../ida/188308.html">远古的龙骨</a>');$('.cpg1_200').html('<a href="../ida/229831.html">矿石的上端材</a> x2');$('.cpg1_204').html('<a href="../ida/218387.html">速的成长饵</a> x3');$('.cpg1_208').html('<a href="../ida/227565.html">超养虫精华</a> x2');$('.cpg1_212').html('<a href="../ida/229782.html">大生意橡果</a>');$('.cpg1_216').html('<a href="../ida/218413.html">怪物的粪</a> x2');$('.cpg1_220').html('<a href="../ida/229918.html">虫的上端材</a> x2');$('.cpg1_224').html('<a href="../ida/218400.html">粘着草</a> x2');$('.cpg1_228').html('<a href="../ida/189353.html">硝化菇</a> x2');$('.cpg1_232').html('<a href="../ida/219793.html">扩散果</a> x2');$('.cpg1_236').html('<a href="../ida/229831.html">矿石的上端材</a> x2');$('.cpg1_240').html('<a href="../ida/221873.html">龙的蜜饵</a> x3');$('.cpg1_244').html('<a href="../ida/189162.html">太古破片</a>');
-$('.cpg2_8').html('<a href="../ida/188673.html">羚鹿的角</a> x2');$('.cpg2_12').html('<a href="../ida/189458.html">光虫</a>');$('.cpg2_16').html('<a href="../ida/219353.html">刺身鱼</a>');$('.cpg2_20').html('<a href="../ida/189643.html">药草</a>');$('.cpg2_24').html('<a href="../ida/229790.html">木的上端材</a>');$('.cpg2_28').html('<a href="../ida/188272.html">蓝蘑菇</a>');$('.cpg2_32').html('<a href="../ida/218402.html">爆裂核桃</a>');$('.cpg2_36').html('<a href="../ida/218403.html">蜂蜜</a> x2');$('.cpg2_40').html('<a href="../ida/229831.html">矿石的上端材</a>');$('.cpg2_44').html('<a href="../ida/220959.html">雷的蜜饵</a> x2');$('.cpg2_48').html('<a href="../ida/229782.html">大生意橡果</a>');$('.cpg2_52').html('<a href="../ida/188296.html">纯粹上端材</a>');$('.cpg2_56').html('<a href="../ida/219836.html">黄速龙的麻痹牙</a> x4');$('.cpg2_60').html('<a href="../ida/218096.html">粘着白蚁</a>');$('.cpg2_64').html('<a href="../ida/219792.html">扩散凸眼金鱼</a> x2');$('.cpg2_68').html('<a href="../ida/218399.html">睡眠草</a>');$('.cpg2_72').html('<a href="../ida/219909.html">心跳蘑菇</a> x2');$('.cpg2_76').html('<a href="../ida/229790.html">木的上端材</a>');$('.cpg2_80').html('<a href="../ida/219793.html">扩散果</a>');$('.cpg2_84').html('<a href="../ida/218380.html">空心骨</a> x2');$('.cpg2_88').html('<a href="../ida/218392.html">砥石</a> x2');$('.cpg2_92').html('<a href="../ida/188469.html">灵鹤石</a>');$('.cpg2_96').html('<a href="../ida/218384.html">重的成长饵</a> x2');$('.cpg2_100').html('<a href="../ida/226819.html">毒虫</a>');$('.cpg2_104').html('<a href="../ida/188296.html">纯粹上端材</a>');$('.cpg2_108').html('<a href="../ida/189458.html">光虫</a> x2');$('.cpg2_112').html('<a href="../ida/229914.html">骨的上端材</a>');$('.cpg2_116').html('<a href="../ida/189703.html">落阳草的根</a>');$('.cpg2_120').html('<a href="../ida/218388.html">常春藤叶</a>');$('.cpg2_124').html('<a href="../ida/189517.html">染色果</a>');$('.cpg2_128').html('<a href="../ida/218398.html">谜之骨</a> x2');$('.cpg2_132').html('<a href="../ida/218403.html">蜂蜜</a> x2');$('.cpg2_136').html('<a href="../ida/219923.html">辉龙石</a>');$('.cpg2_140').html('<a href="../ida/218387.html">速的成长饵</a> x2');$('.cpg2_144').html('<a href="../ida/229821.html">毛皮的上端材</a>');$('.cpg2_148').html('<a href="../ida/188296.html">纯粹上端材</a>');$('.cpg2_152').html('<a href="../ida/189678.html">雷光虫</a>');$('.cpg2_156').html('<a href="../ida/229914.html">骨的上端材</a>');$('.cpg2_160').html('<a href="../ida/188597.html">切味鱼</a> x2');$('.cpg2_164').html('<a href="../ida/218399.html">睡眠草</a>');$('.cpg2_168').html('<a href="../ida/218395.html">毒伞菇</a>');$('.cpg2_172').html('<a href="../ida/218390.html">贯通果</a> x2');$('.cpg2_176').html('<a href="../ida/229918.html">虫的上端材</a>');$('.cpg2_180').html('<a href="../ida/189223.html">铁矿石</a> x2');$('.cpg2_184').html('<a href="../ida/188469.html">灵鹤石</a>');$('.cpg2_188').html('<a href="../ida/188296.html">纯粹上端材</a>');$('.cpg2_192').html('<a href="../ida/229782.html">大生意橡果</a>');$('.cpg2_196').html('<a href="../ida/237545.html">狗龙的上端材</a>');$('.cpg2_200').html('<a href="../ida/229918.html">虫的上端材</a>');$('.cpg2_204').html('<a href="../ida/229914.html">骨的上端材</a>');$('.cpg2_208').html('<a href="../ida/229790.html">木的上端材</a>');$('.cpg2_212').html('<a href="../ida/188272.html">蓝蘑菇</a>');$('.cpg2_216').html('<a href="../ida/218376.html">抵消果实</a> x2');$('.cpg2_220').html('<a href="../ida/229914.html">骨的上端材</a>');$('.cpg2_224').html('<a href="../ida/218403.html">蜂蜜</a> x3');$('.cpg2_228').html('<a href="../ida/229831.html">矿石的上端材</a>');$('.cpg2_232').html('<a href="../ida/218387.html">速的成长饵</a> x2');$('.cpg2_236').html('<a href="../ida/227565.html">超养虫精华</a>');$('.cpg2_240').html('<a href="../ida/189139.html">朴素的上端材</a>');$('.cpg2_244').html('<a href="../ida/188931.html">锈破片</a>');$('.cpg2_248').html('<a href="../ida/219961.html">稀有金龟子</a>');$('.cpg2_252').html('<a href="../ida/219798.html">火药草</a> x2');$('.cpg2_256').html('<a href="../ida/229790.html">木的上端材</a>');$('.cpg2_260').html('<a href="../ida/219909.html">心跳蘑菇</a>');$('.cpg2_264').html('<a href="../ida/189434.html">针果</a> x4');$('.cpg2_268').html('<a href="../ida/218397.html">之ぞ的头骨</a> x2');$('.cpg2_272').html('<a href="../ida/188781.html">狱炎石</a>');$('.cpg2_276').html('<a href="../ida/188469.html">灵鹤石</a>');$('.cpg2_280').html('<a href="../ida/188296.html">纯粹上端材</a>');
-</script>
 
 
 
+
+
+                     </div>
+                   </div>
+</div>
+</main>
+<footer class="border-t border-gray-800 py-8 mt-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
+<svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+</div>
+<span class="font-display text-gray-400">MHXX DOC</span>
+</div>
+<div class="text-sm text-gray-500">
+<a href="https://github.com/Bahtya/mhxxdoc" class="hover:text-primary transition-colors">GitHub</a>
+<span class="mx-2">|</span>
+<a href="https://mhxxdoc.vercel.app" class="hover:text-primary transition-colors">Vercel</a>
+</div>
+<div class="text-xs text-gray-600">Monster Hunter XX © CAPCOM</div>
+</div>
+</div>
+</footer>
 </body>
 </html>
-

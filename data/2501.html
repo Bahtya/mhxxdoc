@@ -1,30 +1,98 @@
-<!doctype html>
-<html lang="zh">
- <head> 
-  <meta charset="utf-8"> 
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge"> 
-  <script type="text/javascript"><!--
-g_fix_size = 1;
-g_wsize = window.screen.width;
-//-->
-</script> 
-  <meta name="viewport" content="width=600"> 
-  <meta name="description" content="新作3DS游戏【MHXX】怪物猎人双十字攻略wiki网站。武器・任务・狩技等的攻略情报和查找数据库"> 
-  <meta name="keywords" content="mhxx,怪物猎人XX,怪物猎人,双十字,攻略"> 
-  <title>
-大型怪物一览 | 【MHXX】怪物猎人双十字攻略大全
-</title> 
-  <link rel="stylesheet" media="all" href="../index.css"> 
-  <script src="../assets/application-53ee482db9501c259f1cd8e29154fa3f.js"></script> 
-  <!--[if lt IE 9]>
-<script src="../js/html5shiv.js"></script>
-<script src="../js/respond.js"></script>
-<![endif]--> 
+<!DOCTYPE html>
+<html lang="zh-CN" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="大型怪物一览 | 怪物猎人双十字 - MHXX怪物猎人XX攻略大全">
+  <title>大型怪物一览 | 怪物猎人双十字 - MHXX攻略大全</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=Russo+One&display=swap" rel="stylesheet">
+  <link rel="icon" href="../index/favicon.ico" sizes="any">
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
-$('body').on('contextmenu selectstart copy cut', false);
-</script> 
- </head> 
- <body id="body_game"> 
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: '#7C3AED', light: '#A78BFA', dark: '#5B21B6' },
+            accent: { DEFAULT: '#F43F5E', light: '#FB7185' },
+            dark: { DEFAULT: '#0F0F23', 50: '#1A1A2E', 100: '#16162A', 200: '#121226', 300: '#0F0F23', 400: '#0B0B1F' },
+          },
+          fontFamily: { display: ['Russo One', 'sans-serif'], body: ['Chakra Petch', 'sans-serif'] },
+        },
+      },
+    }
+  </script>
+  <style>
+    body{font-family:'Chakra Petch',sans-serif;background:#0F0F23;background-image:radial-gradient(ellipse at top,rgba(124,58,237,0.15) 0%,transparent 50%),linear-gradient(rgba(124,58,237,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(124,58,237,0.03) 1px,transparent 1px);background-size:100% 100%,50px 50px,50px 50px}
+    .font-display{font-family:'Russo One',sans-serif}
+    .text-neon{text-shadow:0 0 5px #7C3AED,0 0 10px #7C3AED,0 0 20px #7C3AED}
+    .shadow-neon{box-shadow:0 0 5px #7C3AED,0 0 20px #7C3AED}
+    ::-webkit-scrollbar{width:8px}::-webkit-scrollbar-track{background:#0B0B1F}::-webkit-scrollbar-thumb{background:#7C3AED;border-radius:4px}
+    .nav-link::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:0;height:2px;background:#7C3AED;box-shadow:0 0 10px #7C3AED;transition:width .3s}
+    .nav-link:hover::after,.nav-link.active::after{width:75%}
+    .sidebar-link{display:block;padding:8px 16px;color:#9CA3AF;font-size:14px;transition:all .2s}
+    .sidebar-link:hover{padding-left:24px;background:rgba(124,58,237,0.1);color:#fff}
+    .data-table{width:100%;border-collapse:collapse}
+    .data-table th{background:rgba(124,58,237,0.2);color:#A78BFA;font-family:'Russo One',sans-serif;text-align:left;padding:12px 16px;border-bottom:1px solid rgba(124,58,237,0.3)}
+    .data-table td{padding:12px 16px;border-bottom:1px solid rgba(255,255,255,0.1)}
+    .data-table tr:hover td{background:rgba(124,58,237,0.1)}
+    .breadcrumb{display:flex;align-items:center;gap:8px;font-size:14px;color:#9CA3AF;margin-bottom:24px}
+    .breadcrumb a{color:#A78BFA}.breadcrumb a:hover{color:#7C3AED}
+    .tag{display:inline-block;padding:2px 8px;font-size:12px;border-radius:4px;margin:2px}
+    .tag-new{background:rgba(168,85,247,0.2);color:#C084FC}
+    .tag-g{background:rgba(236,72,153,0.2);color:#F472B6}
+    .th1{background:rgba(124,58,237,0.3);color:#fff;font-family:'Russo One',sans-serif;padding:12px 16px}
+    .th4{background:rgba(124,58,237,0.15);color:#A78BFA;padding:8px 16px;font-size:14px}
+    .t0{width:100%;border-collapse:collapse;margin-bottom:16px;background:rgba(22,22,42,0.8);border-radius:8px;overflow:hidden}
+    .t0 td{padding:10px 16px;border-bottom:1px solid rgba(124,58,237,0.1)}
+    .t0 tr:last-child td{border-bottom:none}
+    .t0 a{color:#A78BFA;transition:color .2s}.t0 a:hover{color:#7C3AED}
+    .b{font-weight:bold}.box1{background:rgba(22,22,42,0.8);border-radius:12px;padding:20px;margin-bottom:24px;border:1px solid rgba(124,58,237,0.2)}
+    .icon1{display:inline-block;width:8px;height:8px;background:#7C3AED;border-radius:50%;margin-right:8px;box-shadow:0 0 10px #7C3AED}
+  </style>
+</head>
+<body class="min-h-screen text-gray-100 antialiased">
+<nav class="fixed top-4 left-4 right-4 z-50 bg-dark-100/90 backdrop-blur-md border border-primary/20 rounded-2xl shadow-2xl">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex items-center justify-between h-16">
+<a href="../index/index.html" class="flex items-center gap-3">
+<div class="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
+<svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+</div>
+<span class="font-display text-xl text-neon">MHXX DOC</span>
+</a>
+<div class="hidden md:flex flex-1 max-w-md mx-8">
+<div class="relative w-full">
+<input type="text" placeholder="搜索怪物、武器、任务..." class="w-full px-4 py-2 pl-10 bg-dark-200 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:shadow-neon transition-all">
+<svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+</div>
+</div>
+<div class="hidden md:flex items-center gap-1">
+<a href="../index/index.html" class="nav-link relative px-4 py-2 text-gray-300 hover:text-primary transition-colors">首页</a>
+<a href="../data/2501.html" class="nav-link relative px-4 py-2 text-gray-300 hover:text-primary transition-colors">怪物</a>
+<a href="../data/1900.html" class="nav-link relative px-4 py-2 text-gray-300 hover:text-primary transition-colors">武器</a>
+<a href="../data/2300.html" class="nav-link relative px-4 py-2 text-gray-300 hover:text-primary transition-colors">防具</a>
+<a href="../data/2859.html" class="nav-link relative px-4 py-2 text-gray-300 hover:text-primary transition-colors">任务</a>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<nav class="breadcrumb">
+<a href="../index/index.html">首页</a>
+<span>/</span>
+<span>大型怪物一览 | 怪物猎人双十字</span>
+</nav>
+<div class="lg:col-span-3">
+                     <div class="bg-dark-100/80 backdrop-blur border border-primary/20 rounded-xl p-6">
+                       <header class="mb-6">
+                         <h1 class="font-display text-2xl md:text-3xl text-white mb-2">大型怪物一览 | 怪物猎人双十字</h1>
+                       </header>
+                        
   <!-- suc_gen --> 
   <div id="main_1"> 
    <div class="data1"> 
@@ -200,14 +268,10 @@ $('body').on('contextmenu selectstart copy cut', false);
      <br>※は条件付色で有效 
     </div> 
     <div style="text-align:center;margin-bottom:15px;"> 
-     <style type="text/css">
-.adslot_middle1 { width: 320px; height: 100px; }
-@media (min-width:500px) { .adslot_middle1 { width: 468px; height: 60px; } }
-@media (min-width:760px) { .adslot_middle1 { width: 728px; height: 90px; } }
-</style> 
+      
      <!-- data中央ビッグバナー1 --> 
     </div> 
-    <script src="../assets/parts/mhx_monster-09c4b4828ed1ab81bcee18dfadd70112.js"></script> 
+     
     <div class="box2"> 
      <noscript> 
       <div class="alert alert-danger" role="alert">
@@ -2403,9 +2467,29 @@ $('body').on('contextmenu selectstart copy cut', false);
     </div> 
    </div> 
   </div> 
-  <script>
-$('.cpg1_12').html('头');$('.cpg1_18').html('胸');$('.cpg1_24').html('头<br>腹');$('.cpg1_30').html('尻');$('.cpg1_36').html('胴<br>首<br>头');$('.cpg1_42').html('头');$('.cpg1_48').html('头');$('.cpg1_54').html('腹');$('.cpg1_60').html('头');$('.cpg1_66').html('头');$('.cpg1_72').html('尾<br>头<br>首');$('.cpg1_78').html('喉<br>头<br>尾');$('.cpg1_84').html('头');$('.cpg1_90').html('头');$('.cpg1_96').html('头');$('.cpg1_102').html('头');$('.cpg1_108').html('头<br>前脚');$('.cpg1_114').html('头<br>尾');$('.cpg1_120').html('头<br>首<br>胴');$('.cpg1_126').html('头<br>尾先<br>翼');$('.cpg1_132').html('回転中<br>头');$('.cpg1_138').html('头');
-$('.cpg2_12').html('×');$('.cpg2_18').html('○');$('.cpg2_24').html('×');$('.cpg2_30').html('◎');$('.cpg2_36').html('×');$('.cpg2_42').html('○');$('.cpg2_48').html('△');$('.cpg2_54').html('△');$('.cpg2_60').html('○');$('.cpg2_66').html('×');$('.cpg2_72').html('△');$('.cpg2_78').html('◎');$('.cpg2_84').html('△');$('.cpg2_90').html('○');$('.cpg2_96').html('△');$('.cpg2_102').html('◎');$('.cpg2_108').html('○');$('.cpg2_114').html('○');$('.cpg2_120').html('○');$('.cpg2_126').html('×');$('.cpg2_132').html('○');$('.cpg2_138').html('△');$('.cpg2_144').html('△');$('.cpg2_150').html('×');$('.cpg2_156').html('◎');$('.cpg2_162').html('×');$('.cpg2_168').html('△');$('.cpg2_174').html('×');$('.cpg2_180').html('△');$('.cpg2_186').html('○');$('.cpg2_192').html('×');$('.cpg2_198').html('△');$('.cpg2_204').html('○');$('.cpg2_210').html('△');$('.cpg2_216').html('○');$('.cpg2_222').html('◎');$('.cpg2_228').html('△');$('.cpg2_234').html('△');$('.cpg2_240').html('×');$('.cpg2_246').html('◎');$('.cpg2_252').html('×');$('.cpg2_258').html('△');$('.cpg2_264').html('×');$('.cpg2_270').html('△');$('.cpg2_276').html('○');$('.cpg2_282').html('△');$('.cpg2_288').html('◎');$('.cpg2_294').html('○');$('.cpg2_300').html('△');$('.cpg2_306').html('△');$('.cpg2_312').html('○');$('.cpg2_318').html('◎');$('.cpg2_324').html('○');$('.cpg2_330').html('×');$('.cpg2_336').html('△');$('.cpg2_342').html('×');$('.cpg2_348').html('○');$('.cpg2_354').html('○');$('.cpg2_360').html('○');$('.cpg2_366').html('×');$('.cpg2_372').html('△');$('.cpg2_378').html('△');$('.cpg2_384').html('○');$('.cpg2_390').html('△');$('.cpg2_396').html('×');$('.cpg2_402').html('○');$('.cpg2_408').html('○');$('.cpg2_414').html('△');$('.cpg2_420').html('△');$('.cpg2_426').html('○');$('.cpg2_432').html('△');$('.cpg2_438').html('○');$('.cpg2_444').html('◎');$('.cpg2_450').html('×');$('.cpg2_456').html('○');$('.cpg2_462').html('△');$('.cpg2_468').html('○');$('.cpg2_474').html('○');$('.cpg2_480').html('△');$('.cpg2_486').html('◎');$('.cpg2_492').html('×');$('.cpg2_498').html('△');$('.cpg2_504').html('△');$('.cpg2_510').html('×');$('.cpg2_516').html('×');$('.cpg2_522').html('○');$('.cpg2_528').html('◎');$('.cpg2_534').html('○');$('.cpg2_540').html('×');$('.cpg2_546').html('◎');$('.cpg2_552').html('△');$('.cpg2_558').html('×');$('.cpg2_564').html('○');$('.cpg2_570').html('×');$('.cpg2_576').html('○');$('.cpg2_582').html('△');$('.cpg2_588').html('△');$('.cpg2_594').html('△');$('.cpg2_600').html('△');$('.cpg2_606').html('×');$('.cpg2_612').html('△');$('.cpg2_618').html('×');$('.cpg2_624').html('◎');$('.cpg2_630').html('△');$('.cpg2_636').html('○');$('.cpg2_642').html('×');$('.cpg2_648').html('△');$('.cpg2_654').html('○');$('.cpg2_660').html('×');$('.cpg2_666').html('×');$('.cpg2_672').html('△');$('.cpg2_678').html('◎');$('.cpg2_684').html('△');$('.cpg2_690').html('◎');$('.cpg2_696').html('×');$('.cpg2_702').html('◎');$('.cpg2_708').html('○');$('.cpg2_714').html('○');
-</script>  
- </body>
+    
+ 
+                     </div>
+                   </div>
+</div>
+</main>
+<footer class="border-t border-gray-800 py-8 mt-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
+<svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+</div>
+<span class="font-display text-gray-400">MHXX DOC</span>
+</div>
+<div class="text-sm text-gray-500">
+<a href="https://github.com/Bahtya/mhxxdoc" class="hover:text-primary transition-colors">GitHub</a>
+<span class="mx-2">|</span>
+<a href="https://mhxxdoc.vercel.app" class="hover:text-primary transition-colors">Vercel</a>
+</div>
+<div class="text-xs text-gray-600">Monster Hunter XX © CAPCOM</div>
+</div>
+</div>
+</footer>
+</body>
 </html>

@@ -1,40 +1,98 @@
-﻿<!DOCTYPE html>
-<html lang="ja">
+<!DOCTYPE html>
+<html lang="zh-CN" class="dark">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
-
-
-<meta name="description" content="特殊许可G级 【特殊许可】鏖魔狩猎委托G1的任务报酬、出现怪物、乱入情报、出现条件、入手狩技や装备开放条件之どを掲載。">
-<meta name="keywords" content="【特殊许可】鏖魔狩猎委托G1,任务报酬,出现条件,MHXX,怪物猎人XX,怪物猎人双十字">
-
-<title>
-【特殊许可】鏖魔狩猎委托G1 | 【MHXX】怪物猎人双十字攻略大全
-</title>
-
-<link rel="stylesheet" media="all" href="../index.css">
-<script src="../assets/application-53ee482db9501c259f1cd8e29154fa3f.js"></script>
-
-<!--[if lt IE 9]>
-<script src="../js/html5shiv.js"></script>
-<script src="../js/respond.js"></script>
-<![endif]-->
-
-<script>
-$('body').on('contextmenu selectstart copy cut', false);
-</script>
-
-
-
-
-
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="【特殊许可】鏖魔狩猎委托G1 | 怪物猎人双十字 - MHXX怪物猎人XX攻略大全">
+  <title>【特殊许可】鏖魔狩猎委托G1 | 怪物猎人双十字 - MHXX攻略大全</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=Russo+One&display=swap" rel="stylesheet">
+  <link rel="icon" href="../index/favicon.ico" sizes="any">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: '#7C3AED', light: '#A78BFA', dark: '#5B21B6' },
+            accent: { DEFAULT: '#F43F5E', light: '#FB7185' },
+            dark: { DEFAULT: '#0F0F23', 50: '#1A1A2E', 100: '#16162A', 200: '#121226', 300: '#0F0F23', 400: '#0B0B1F' },
+          },
+          fontFamily: { display: ['Russo One', 'sans-serif'], body: ['Chakra Petch', 'sans-serif'] },
+        },
+      },
+    }
+  </script>
+  <style>
+    body{font-family:'Chakra Petch',sans-serif;background:#0F0F23;background-image:radial-gradient(ellipse at top,rgba(124,58,237,0.15) 0%,transparent 50%),linear-gradient(rgba(124,58,237,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(124,58,237,0.03) 1px,transparent 1px);background-size:100% 100%,50px 50px,50px 50px}
+    .font-display{font-family:'Russo One',sans-serif}
+    .text-neon{text-shadow:0 0 5px #7C3AED,0 0 10px #7C3AED,0 0 20px #7C3AED}
+    .shadow-neon{box-shadow:0 0 5px #7C3AED,0 0 20px #7C3AED}
+    ::-webkit-scrollbar{width:8px}::-webkit-scrollbar-track{background:#0B0B1F}::-webkit-scrollbar-thumb{background:#7C3AED;border-radius:4px}
+    .nav-link::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:0;height:2px;background:#7C3AED;box-shadow:0 0 10px #7C3AED;transition:width .3s}
+    .nav-link:hover::after,.nav-link.active::after{width:75%}
+    .sidebar-link{display:block;padding:8px 16px;color:#9CA3AF;font-size:14px;transition:all .2s}
+    .sidebar-link:hover{padding-left:24px;background:rgba(124,58,237,0.1);color:#fff}
+    .data-table{width:100%;border-collapse:collapse}
+    .data-table th{background:rgba(124,58,237,0.2);color:#A78BFA;font-family:'Russo One',sans-serif;text-align:left;padding:12px 16px;border-bottom:1px solid rgba(124,58,237,0.3)}
+    .data-table td{padding:12px 16px;border-bottom:1px solid rgba(255,255,255,0.1)}
+    .data-table tr:hover td{background:rgba(124,58,237,0.1)}
+    .breadcrumb{display:flex;align-items:center;gap:8px;font-size:14px;color:#9CA3AF;margin-bottom:24px}
+    .breadcrumb a{color:#A78BFA}.breadcrumb a:hover{color:#7C3AED}
+    .tag{display:inline-block;padding:2px 8px;font-size:12px;border-radius:4px;margin:2px}
+    .tag-new{background:rgba(168,85,247,0.2);color:#C084FC}
+    .tag-g{background:rgba(236,72,153,0.2);color:#F472B6}
+    .th1{background:rgba(124,58,237,0.3);color:#fff;font-family:'Russo One',sans-serif;padding:12px 16px}
+    .th4{background:rgba(124,58,237,0.15);color:#A78BFA;padding:8px 16px;font-size:14px}
+    .t0{width:100%;border-collapse:collapse;margin-bottom:16px;background:rgba(22,22,42,0.8);border-radius:8px;overflow:hidden}
+    .t0 td{padding:10px 16px;border-bottom:1px solid rgba(124,58,237,0.1)}
+    .t0 tr:last-child td{border-bottom:none}
+    .t0 a{color:#A78BFA;transition:color .2s}.t0 a:hover{color:#7C3AED}
+    .b{font-weight:bold}.box1{background:rgba(22,22,42,0.8);border-radius:12px;padding:20px;margin-bottom:24px;border:1px solid rgba(124,58,237,0.2)}
+    .icon1{display:inline-block;width:8px;height:8px;background:#7C3AED;border-radius:50%;margin-right:8px;box-shadow:0 0 10px #7C3AED}
+  </style>
 </head>
-
-
-<body id="body_game"  >
+<body class="min-h-screen text-gray-100 antialiased">
+<nav class="fixed top-4 left-4 right-4 z-50 bg-dark-100/90 backdrop-blur-md border border-primary/20 rounded-2xl shadow-2xl">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex items-center justify-between h-16">
+<a href="../index/index.html" class="flex items-center gap-3">
+<div class="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
+<svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+</div>
+<span class="font-display text-xl text-neon">MHXX DOC</span>
+</a>
+<div class="hidden md:flex flex-1 max-w-md mx-8">
+<div class="relative w-full">
+<input type="text" placeholder="搜索怪物、武器、任务..." class="w-full px-4 py-2 pl-10 bg-dark-200 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:shadow-neon transition-all">
+<svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+</div>
+</div>
+<div class="hidden md:flex items-center gap-1">
+<a href="../index/index.html" class="nav-link relative px-4 py-2 text-gray-300 hover:text-primary transition-colors">首页</a>
+<a href="../data/2501.html" class="nav-link relative px-4 py-2 text-gray-300 hover:text-primary transition-colors">怪物</a>
+<a href="../data/1900.html" class="nav-link relative px-4 py-2 text-gray-300 hover:text-primary transition-colors">武器</a>
+<a href="../data/2300.html" class="nav-link relative px-4 py-2 text-gray-300 hover:text-primary transition-colors">防具</a>
+<a href="../data/2859.html" class="nav-link relative px-4 py-2 text-gray-300 hover:text-primary transition-colors">任务</a>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<nav class="breadcrumb">
+<a href="../index/index.html">首页</a>
+<span>/</span>
+<span>【特殊许可】鏖魔狩猎委托G1 | 怪物猎人双十字</span>
+</nav>
+<div class="lg:col-span-3">
+                     <div class="bg-dark-100/80 backdrop-blur border border-primary/20 rounded-xl p-6">
+                       <header class="mb-6">
+                         <h1 class="font-display text-2xl md:text-3xl text-white mb-2">【特殊许可】鏖魔狩猎委托G1 | 怪物猎人双十字</h1>
+                       </header>
+                       
 
 
 <!-- suc_gen -->
@@ -774,13 +832,32 @@ $('body').on('contextmenu selectstart copy cut', false);
 </div>
 </div>
 
-<script>
-$('.cpg1_12').html('<a href="../ida/286314.html">強龙骨</a>');$('.cpg1_18').html('<a href="../ida/227454.html">异形的坚骨 x2</a>');$('.cpg1_24').html('<a href="../ida/285747.html">潮币 x9</a>');
-$('.cpg2_10').html('<span class="gb">13%</span>');$('.cpg2_15').html('<span class="gb">10%</span>');$('.cpg2_20').html('<span class="rb">100%</span>');$('.cpg2_25').html('<span class="gb">25%</span>');
-</script>
 
 
 
+
+
+                     </div>
+                   </div>
+</div>
+</main>
+<footer class="border-t border-gray-800 py-8 mt-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
+<svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+</div>
+<span class="font-display text-gray-400">MHXX DOC</span>
+</div>
+<div class="text-sm text-gray-500">
+<a href="https://github.com/Bahtya/mhxxdoc" class="hover:text-primary transition-colors">GitHub</a>
+<span class="mx-2">|</span>
+<a href="https://mhxxdoc.vercel.app" class="hover:text-primary transition-colors">Vercel</a>
+</div>
+<div class="text-xs text-gray-600">Monster Hunter XX © CAPCOM</div>
+</div>
+</div>
+</footer>
 </body>
 </html>
-

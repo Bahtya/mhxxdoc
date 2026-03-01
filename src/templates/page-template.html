@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="[[DESCRIPTION]]">
+  <title>[[TITLE]] | MHXX攻略大全</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=Russo+One&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="[[ROOT]]index/favicon.ico" sizes="any">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: '#7C3AED', light: '#A78BFA', dark: '#5B21B6' },
+            secondary: { DEFAULT: '#A78BFA', light: '#C4B5FD', dark: '#7C3AED' },
+            accent: { DEFAULT: '#F43F5E', light: '#FB7185', dark: '#E11D48' },
+            dark: { DEFAULT: '#0F0F23', 50: '#1A1A2E', 100: '#16162A', 200: '#121226', 300: '#0F0F23', 400: '#0B0B1F', 500: '#080819' },
+          },
+          fontFamily: { display: ['Russo One', 'sans-serif'], body: ['Chakra Petch', 'sans-serif'] },
+        },
+      },
+    }
+  </script>
+  <style>
+    body { font-family: 'Chakra Petch', sans-serif; background: #0F0F23; background-image: radial-gradient(ellipse at top, rgba(124, 58, 237, 0.15) 0%, transparent 50%), linear-gradient(rgba(124, 58, 237, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(124, 58, 237, 0.03) 1px, transparent 1px); background-size: 100% 100%, 50px 50px, 50px 50px; }
+    .font-display { font-family: 'Russo One', sans-serif; }
+    .text-neon { text-shadow: 0 0 5px #7C3AED, 0 0 10px #7C3AED, 0 0 20px #7C3AED; }
+    .shadow-neon { box-shadow: 0 0 5px #7C3AED, 0 0 20px #7C3AED; }
+    .shadow-glow { box-shadow: 0 0 40px rgba(124, 58, 237, 0.3); }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0B0B1F; }
+    ::-webkit-scrollbar-thumb { background: #7C3AED; border-radius: 4px; }
+    .nav-link::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 0; height: 2px; background: #7C3AED; box-shadow: 0 0 10px #7C3AED; transition: width 0.3s; }
+    .nav-link:hover::after, .nav-link.active::after { width: 75%; }
+    .card-hover:hover { transform: translateY(-2px); box-shadow: 0 0 30px rgba(124, 58, 237, 0.3); }
+    .sidebar-link:hover { padding-left: 1.5rem; background: rgba(124, 58, 237, 0.1); }
+    .sidebar-link.active { border-left: 2px solid #7C3AED; background: rgba(124, 58, 237, 0.2); }
+    .data-table { width: 100%; border-collapse: collapse; }
+    .data-table th { background: rgba(124, 58, 237, 0.2); color: #A78BFA; font-family: 'Russo One', sans-serif; text-align: left; padding: 12px 16px; border-bottom: 1px solid rgba(124, 58, 237, 0.3); }
+    .data-table td { padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .data-table tr:hover td { background: rgba(124, 58, 237, 0.1); }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: #9CA3AF; }
+    .breadcrumb a { color: #A78BFA; transition: color 0.2s; }
+    .breadcrumb a:hover { color: #7C3AED; }
+    .tag { display: inline-block; padding: 2px 8px; font-size: 12px; border-radius: 4px; }
+    .tag-fire { background: rgba(239, 68, 68, 0.2); color: #F87171; }
+    .tag-water { background: rgba(59, 130, 246, 0.2); color: #60A5FA; }
+    .tag-thunder { background: rgba(234, 179, 8, 0.2); color: #FACC15; }
+    .tag-ice { background: rgba(34, 211, 238, 0.2); color: #22D3EE; }
+    .tag-dragon { background: rgba(124, 58, 237, 0.2); color: #A78BFA; }
+    .tag-new { background: rgba(168, 85, 247, 0.2); color: #C084FC; }
+    .tag-g { background: rgba(236, 72, 153, 0.2); color: #F472B6; }
+  </style>
+</head>
+<body class="min-h-screen text-gray-100 antialiased">
+
+  <!-- Navigation -->
+  <nav class="fixed top-4 left-4 right-4 z-50 bg-dark-100/90 backdrop-blur-md border border-primary/20 rounded-2xl shadow-2xl">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between h-16">
+        <a href="[[ROOT]]index/index.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <span class="font-display text-xl text-neon">MHXX DOC</span>
+        </a>
+        <div class="hidden md:flex flex-1 max-w-md mx-8">
+          <div class="relative w-full">
+            <input type="text" placeholder="搜索怪物、武器、任务..." class="w-full px-4 py-2 pl-10 bg-dark-200 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:shadow-neon transition-all">
+            <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center gap-1">
+          <a href="[[ROOT]]index/index.html" class="nav-link relative px-4 py-2 text-gray-300 hover:text-primary transition-colors">首页</a>
+          <a href="[[ROOT]]data/2501.html" class="nav-link relative px-4 py-2 text-gray-300 hover:text-primary transition-colors">怪物</a>
+          <a href="[[ROOT]]data/1900.html" class="nav-link relative px-4 py-2 text-gray-300 hover:text-primary transition-colors">武器</a>
+          <a href="[[ROOT]]data/2300.html" class="nav-link relative px-4 py-2 text-gray-300 hover:text-primary transition-colors">防具</a>
+          <a href="[[ROOT]]data/2859.html" class="nav-link relative px-4 py-2 text-gray-300 hover:text-primary transition-colors">任务</a>
+        </div>
+        <button class="md:hidden p-2 text-gray-400 hover:text-white">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="pt-24 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb mb-6">
+        <a href="[[ROOT]]index/index.html">首页</a>
+        <span>/</span>
+        <span>[[BREADCRUMB]]</span>
+      </nav>
+
+      <!-- Page Header -->
+      <header class="mb-8">
+        <h1 class="font-display text-3xl md:text-4xl text-white mb-2">[[PAGE_TITLE]]</h1>
+        [[PAGE_SUBTITLE]]
+      </header>
+
+      <!-- Content Area -->
+      <div class="grid lg:grid-cols-4 gap-8">
+        [[SIDEBAR]]
+        [[CONTENT]]
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-800 py-8 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
+            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <span class="font-display text-gray-400">MHXX DOC</span>
+        </div>
+        <div class="text-sm text-gray-500">
+          <a href="https://github.com/Bahtya/mhxxdoc" class="hover:text-primary transition-colors">GitHub</a>
+          <span class="mx-2">|</span>
+          <a href="https://mhxxdoc.vercel.app" class="hover:text-primary transition-colors">Vercel</a>
+        </div>
+        <div class="text-xs text-gray-600">Monster Hunter XX © CAPCOM</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
