@@ -1,7 +1,6 @@
 {
-  "build": {
-    "env": {
-      "NODE_VERSION": "20.x"
-    }
-  }
+  "version": 2,
+  "public": true,
+  "cleanUrls": true,
+  "trailingSlash": false
 }
